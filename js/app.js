@@ -11,7 +11,7 @@ continueButton.addEventListener('click', function() {
   } else if (role === '20') {
     // Если роль учитель, проверить пароль
     let checkRole = prompt('Введите пароль: ');
-    if (checkRole === 'admin') {
+    if (checkRole === '') {
       // Если пароль верный, перейти на страницу teacher.html
       window.location.href = './teacher.html';
     } else {

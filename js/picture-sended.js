@@ -29,3 +29,26 @@ if (dataURL) {
   // Показываем элемент img на странице
   imageOutput.style.display = "block";
 }
+
+
+// Получаем данные из локального хранилища и преобразуем JSON обратно в объект
+const storedData = JSON.parse(localStorage.getItem('myData'));
+
+// Проверяем, есть ли сохраненные данные
+if (storedData) {
+  // Создаем элементы для текста и ссылки
+  const textElement = document.createElement('p');
+  const linkElement = document.createElement('a');
+
+  // Устанавливаем текст и ссылку на элементы
+  textElement.textContent = storedData.text;
+  linkElement.textContent = 'Перейти по ссылке';
+  linkElement.href = storedData.link;
+
+  // Добавляем элементы на страницу
+  document.body.appendChild(textElement);
+  document.body.appendChild(linkElement);
+} else {
+  // Если данных нет, вы можете вывести сообщение об отсутствии данных
+  console.log('Нет сохраненных данных');
+}
