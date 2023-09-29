@@ -39,6 +39,7 @@ if (storedData) {
   // Создаем элементы для текста и ссылки
   const textElement = document.createElement('p');
   const linkElement = document.createElement('a');
+  document.querySelector('.row').appendChild(textElement);
 
   // Устанавливаем текст и ссылку на элементы
   textElement.textContent = storedData.text;

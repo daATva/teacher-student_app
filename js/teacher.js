@@ -29,8 +29,39 @@ for (let i = 0; i < options.length; i++) {
 // Создаем объект, который содержит текст и ссылку
 const data = {
   text: 'Пример текста',
-  link: 'https://www.example.com'
+  link: 'https://www.example.com' ,
+  classNames: ['mb-4', 'class2', 'class3']
+
 };
 
 // Преобразуем объект в JSON и сохраняем его в локальном хранилище
 localStorage.setItem('myData', JSON.stringify(data));
+
+// Сохраняем данные в локальное хранилище
+localStorage.setItem('myData', JSON.stringify(data));
+
+// Получаем данные из локального хранилища и преобразуем JSON обратно в объект
+const storedData = JSON.parse(localStorage.getItem('myData'));
+
+// Проверяем, есть ли сохраненные данные
+if (storedData) {
+  // Создаем элемент для текста
+  const textElement = document.createElement('p');
+
+  // Устанавливаем текст на элемент
+  textElement.textContent = storedData.text;
+
+  // Добавляем классы к элементу
+  storedData.classNames.forEach(className => {
+    if (className === 'mb-4') {
+      textElement.classList.add(className);
+    }
+  });
+  // Добавляем элемент на страницу
+  document.querySelector('.text-center').appendChild(textElement);
+  // Создаем ссылку и добавляем к ней атрибут href со значением из свойства link объекта data
+const linkElement = document.createElement('a');
+linkElement.href = storedData.link;
+
+// Добавляем текст и ссылку в элемент .text-center
+}
