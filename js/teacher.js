@@ -63,5 +63,5 @@ if (storedData) {
 const linkElement = document.createElement('a');
 linkElement.href = storedData.link;
 
-// Добавляем текст и ссылку в элемент .text-center
+// Добавляем текст и ссылку в элемент .text-center   vvvvv
 }
