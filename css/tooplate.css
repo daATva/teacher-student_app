@@ -204,7 +204,7 @@ ul.tm-home-list:not(.browser-default) {
 .input__picture{
   display: flex;
   justify-self: center;
-  padding: 50px 0px 0px 0px;
+  /* padding: 50px 0px 0px 0px; */
   display: none;
 }
 

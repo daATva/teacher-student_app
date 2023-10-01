@@ -34,22 +34,45 @@ if (dataURL) {
 // Получаем данные из локального хранилища и преобразуем JSON обратно в объект
 const storedData = JSON.parse(localStorage.getItem('myData'));
 
+// import { options } from "./teacher";
+
+// Получаем сохраненное значение из Local Storage
+let selectedOptionText = localStorage.getItem('SelectedOptionText');
+
+// Выводим значение в консоль
+console.log(selectedOptionText);
+
 // Проверяем, есть ли сохраненные данные
 if (storedData) {
-  // Создаем элементы для текста и ссылки
-  const textElement = document.createElement('p');
-  const linkElement = document.createElement('a');
-  document.querySelector('.row').appendChild(textElement);
+// Создаем элементы для текста и ссылки
+const textElement = document.createElement('p');
+const linkElement = document.createElement('a');
 
-  // Устанавливаем текст и ссылку на элементы
-  textElement.textContent = storedData.text;
-  linkElement.textContent = 'Перейти по ссылке';
-  linkElement.href = storedData.link;
+document.querySelector('.text-center').appendChild(textElement);
+document.querySelector('.text-center').appendChild(linkElement);
 
-  // Добавляем элементы на страницу
-  document.body.appendChild(textElement);
-  document.body.appendChild(linkElement);
+// Устанавливаем текст и ссылку на элементы
+textElement.textContent = 'У вас есть невыполненный тест, чтобы пройти нажмите на тему текста';
+
+let linkStorage = localStorage.getItem('SelectedValue');
+
+linkElement.textContent = linkStorage;
+
+linkElement.href = storedData.link;
+
+
+// Добавляем слушатель на ссылку
+linkElement.addEventListener('click', function() {
+  // Перенаправляем на другую страницу в зависимости от значения linkStorage
+  if (linkStorage === 'Тест по предмету «Математическая логика»') {
+    window.location.href = 'sisAI.html';
+  } else if (linkStorage === 'Тест по предмету «Инновационная экономика и технологическое предпринимательство»') {
+    window.location.href = 'innovo.html';
+  } else {
+    console.log('Неизвестная тема');
+  }
+});
 } else {
-  // Если данных нет, вы можете вывести сообщение об отсутствии данных
-  console.log('Нет сохраненных данных');
+// Если данных нет, вы можете вывести сообщение об отсутствии данных
+console.log('Нет сохраненных данных');
 }
