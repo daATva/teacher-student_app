@@ -546,7 +546,9 @@ input[type="email"]:not(.browser-default).tm-input-white-bg {
   padding: 0px 30px 5px 30px ;
   margin: 10px 0px 30px 0px;
 }
-
+.mt-21{
+  text-align: left;
+}
 @media (max-width: 400px) {
   .tm-form-block {
     padding: 15px;

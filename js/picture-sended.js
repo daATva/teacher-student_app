@@ -56,10 +56,15 @@ textElement.textContent = 'У вас есть невыполненный тес�
 
 let linkStorage = localStorage.getItem('SelectedValue');
 
+
 linkElement.textContent = linkStorage;
 
 linkElement.href = storedData.link;
 
+
+if(linkStorage === 'Тест по предмету «Математическая логика»'){
+  console.log(666)
+}
 
 // Добавляем слушатель на ссылку
 linkElement.addEventListener('click', function() {
