@@ -1,18 +1,9 @@
-/*
-
-Template 2105 Input
-
-http://www.tooplate.com/view/2105-input
-	
-*/
-
-
 html {
   font-size: 17px;
 }
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
   color: white;
   overflow-x: hidden;
   background-color: #000;
@@ -189,7 +180,7 @@ ul.tm-home-list:not(.browser-default) {
   background-color: rgb(31 31 31 / 79%);
   border-radius:20px ;
   padding: 30px 30px;
-  background-image: url(../img/task-bg.jpeg);
+  background-image: url(../img/task-bg.png);
   /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: center top;
@@ -688,7 +679,7 @@ display: block;
 
 .mb-1 {
   text-align: center;
-  margin: 0 auto;
+  margin: 0 autogi;
   width: 200px;
   padding: 40px 0px 0px 0px;
 }
