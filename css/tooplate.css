@@ -679,3 +679,22 @@ display: block;
   }
 }
 
+.tm-mark-block textarea{
+  display: flex;
+  flex-direction: column;
+  border-radius:20px ;
+  padding: 20px;
+}
+
+.mb-1 {
+  text-align: center;
+  margin: 0 auto;
+  width: 200px;
+  padding: 40px 0px 0px 0px;
+}
+
+.mt-23 {
+padding:0px 15px  ;
+border-radius: 15px;
+font-size: 15px;
+}
