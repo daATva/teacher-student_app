@@ -17,45 +17,34 @@ const storedData = JSON.parse(localStorage.getItem('myData'));
 const savedRadioButtons = JSON.parse(localStorage.getItem('savedRadioButton1'));
 
 // Получаем сохраненное значение из Local Storage
+
 let selectedOptionText = localStorage.getItem('SelectedOptionText');
 
-console.log(selectedOptionText)
 
 // Проверяем, есть ли сохраненные данные
 if (1>0) {
 // Создаем элементы для текста и ссылки
-const savedRadioButton1 = document.createElement('p');
-// Создаем элементы для текста и ссылки
 const textElement = document.createElement('p');
 const linkElement = document.createElement('a');
 
-document.querySelector('.text-center').appendChild(textElement);
+
+// document.querySelector('.text-center').appendChild(textElement);
 document.querySelector('.text-center').appendChild(linkElement);
 
 textElement.textContent = 'У вас есть невыполненный тест, чтобы пройти нажмите на тему текста';
 
 // Устанавливаем текст и ссылку на элементы
 textElement.textContent = savedRadioButton4;
+textElement.textContent = savedRadioButton1;
+textElement.textContent = savedRadioButton4;
 
-let linkStorage = localStorage.getItem('SelectedValue');
-
-// linkElement.textContent = linkStorage;
-
-// linkElement.href = storedData.link;
-
-console.log(111)
-
-document.querySelector('.mt-5').appendChild(savedRadioButton1);
-
-let  checek = document.querySelector('.mt-5').appendChild(savedRadioButton1);
-
-console.log(savedRadioButton1)
 
 const test = `
+<p class="mt-5 text-center">Ученик выполнил задания</p>
 <p class="mt-5 text-center">Тест по предмету «Системы искусственного интеллекта»</p>
 <p class="mt-21">Задание 1
 <p> Кто написал книгу «Персепторны»?</p></p>
-${textElement}
+${savedRadioButton1}
 <p class="mt-21">Задание 2 
 <p>Кто создал первую модель искусственных нейронных сетей?</p></p>
 <p class="mt-21">Задание 3 

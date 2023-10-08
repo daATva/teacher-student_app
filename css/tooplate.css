@@ -110,14 +110,14 @@ ul.tm-home-list:not(.browser-default) {
 
 #home {
   background-image: url(../img/input-bg-05.jpg);
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: center top;
 }
 
 #survey {
   background-image: url(../img/input-bg-06.jpg);
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -125,7 +125,7 @@ ul.tm-home-list:not(.browser-default) {
 #register {
   padding-top: 180px;
   background-image: url(../img/input-bg-01.jpg);
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: 50% 30%;
   color: black;
@@ -133,7 +133,7 @@ ul.tm-home-list:not(.browser-default) {
 
 #application {
   background-image: url(../img/input-bg-03.jpg);
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: center top;
   color: black;
@@ -141,7 +141,7 @@ ul.tm-home-list:not(.browser-default) {
 
 #login {
   background-image: url(../img/input-bg-04.jpg);
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -548,6 +548,7 @@ input[type="email"]:not(.browser-default).tm-input-white-bg {
 }
 .mt-21{
   text-align: left;
+  margin-top: 20px;
 }
 @media (max-width: 400px) {
   .tm-form-block {
