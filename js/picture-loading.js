@@ -6,6 +6,9 @@ let imageOutput = document.getElementById("image-output");
 
 let uploadButton = document.getElementById("upload-button");
 
+const task = document.getElementById("task");
+
+
 // Добавляем обработчик события change для input элемента
 fileInput.addEventListener("change", function () {
   // Проверяем, есть ли выбранный файл
@@ -61,12 +64,14 @@ fileInput.addEventListener("change", function () {
 });
 
 uploadButton.addEventListener("click", function (e) {
+  
   // Проверяем, есть ли картинка в localStorage
   if (localStorage.getItem("image")) {
     // Перенаправляем на другую страницу
     window.location.href = "./survey.html";
     // Не удаляем изображение из localStorage
     // localStorage.removeItem("image");
+    task.style.display = "none";
   } else {
     // Отменяем действие по умолчанию (переход по ссылке)
     e.preventDefault();

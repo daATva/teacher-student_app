@@ -74,12 +74,6 @@ for (var i = 0; i < rates4.length; i++) {
 }
 
 
-// Удаление кнопок  из localStorage
 
-// localStorage.removeItem('selectedRadioButton1');
-// localStorage.removeItem('selectedRadioButton2');
-// localStorage.removeItem('selectedRadioButton3');
-// localStorage.removeItem('selectedRadioButton4');
-// localStorage.removeItem('textareaValue');
 
 

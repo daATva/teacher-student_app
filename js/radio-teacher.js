@@ -1,9 +1,8 @@
+let savedRadioButton1 = localStorage.getItem('selectedRadioButtongroup1');
 let savedRadioButton2 = localStorage.getItem('selectedRadioButtongroup2');
 let savedRadioButton3 = localStorage.getItem('selectedRadioButtongroup3');
 let savedRadioButton4 = localStorage.getItem('selectedRadioButtongroup4');
 let savedTextareaValue = localStorage.getItem('textareaValue');
-const savedRadioButton1 = localStorage.getItem('selectedRadioButtongroup1');
-
 
 // Теперь у вас есть доступ к сохраненным значениям, и вы можете использовать их по вашему усмотрению
 console.log('Задание 1: ' + savedRadioButton1);
@@ -22,7 +21,7 @@ let selectedOptionText = localStorage.getItem('SelectedOptionText');
 
 
 // Проверяем, есть ли сохраненные данные
-if (1>0) {
+if (storedData) {
 // Создаем элементы для текста и ссылки
 const textElement = document.createElement('p');
 const linkElement = document.createElement('a');
@@ -40,34 +39,70 @@ textElement.textContent = savedRadioButton4;
 
 
 const test = `
-<p class="mt-5 text-center">Ученик выполнил задания</p>
-<p class="mt-5 text-center">Тест по предмету «Системы искусственного интеллекта»</p>
-<p class="mt-21">Задание 1
-<p> Кто написал книгу «Персепторны»?</p></p>
-${savedRadioButton1}
-<p class="mt-21">Задание 2 
-<p>Кто создал первую модель искусственных нейронных сетей?</p></p>
-<p class="mt-21">Задание 3 
-<p>Кто разработал первый нейрокомпьютер?</p></p>
-<p class="mt-21">Задание 4 
-<p>На каких знаниях основываются системы?</p></p>
+<p class="mt-5  mt-7 text-center">Ученик выполнил задания</p>
+<p class="text-center mt-22">Тест по предмету «Системы искусственного интеллекта»</p>
+
+<div class = "tm-bg-other" >
+
+    <div class = "tm-bg-others">
+        <p class="mt-21">Задание 1
+        <p> Кто написал книгу «Персепторны»?</p></p>
+        <p>Ответ: ${savedRadioButton1}</p></p>
+    </div>
+    
+    <div class = "tm-bg-others">
+        <p class="mt-21">Задание 2 
+        <p>Кто создал первую модель искусственных нейронных сетей?</p></p>
+        <p>Ответ: ${savedRadioButton2}</p></p>
+    </div>
+
+    <div class = "tm-bg-others">
+        <p class="mt-21">Задание 3 
+        <p>Кто разработал первый нейрокомпьютер?</p></p>
+        <p>Ответ: ${savedTextareaValue}</p></p>
+    </div>
+
+    <div class = "tm-bg-others">
+        <p class="mt-21">Задание 4 
+        <p>На каких знаниях основываются системы?</p></p>
+        <p>Ответ: ${savedRadioButton3}</p></p>
+    </div>
+
+    <div class = "tm-bg-others">
+        <p class="mt-21">Задание 5 
+        <p>Если система использует генетические вычисления и базы данных, она относится к каким интеллектуальным системам?</p></p>
+        <p>Ответ: ${savedRadioButton4}</p></p>
+    </div>
+
+</div>
+
 `;
+
+const empty = ``
 
 const container = document.querySelector('.task__stage');
 
 const div = document.createElement('div');
+
 div.innerHTML = test;
+
 container.appendChild(div);
 
+if(savedTextareaValue === null){
+    div.innerHTML = empty
+}
 // document.querySelector('.text-center').appendChild(linkElement);
 
 
 }
 
-document.getElementById("upload-button").onclick = function(){
-console.log(888)
-}
+// const uploadButton = document.getElementById("upload-button");
+
+// uploadButton.addEventListener("click", function() {
+//   task.style.display = "none";
+//   console.log(888);
+// });
 
 
-let task = document.getElementById('file-input')
+
 

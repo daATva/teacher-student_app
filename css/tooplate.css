@@ -185,9 +185,27 @@ ul.tm-home-list:not(.browser-default) {
 .tm-bg-black {
   background-color: rgba(0, 0, 0, 0.785);
 }
+.tm-bg-other {
+  background-color: rgb(31 31 31 / 79%);
+  border-radius:20px ;
+  padding: 30px 30px;
+  background-image: url(../img/task-bg.jpeg);
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.tm-bg-others {
+  background-color: rgba(0, 0, 0, 0.900);
+  filter: brightness(70%);
+
+  border-radius:20px ;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+}
+
 
 .tm-form-block {
-  padding: 0px 30px;
+  /* padding: 0px 30px; */
   max-width: 200px;
   margin-top: 35px;
   display: flex;
@@ -549,6 +567,16 @@ input[type="email"]:not(.browser-default).tm-input-white-bg {
 .mt-21{
   text-align: left;
   margin-top: 20px;
+}
+.mt-22{
+  margin:0px 0px  30px 0px;
+  font-size: 20px;
+}
+.mt-7{
+  font-size: 18px;
+}
+.task__stage{
+display: block;
 }
 @media (max-width: 400px) {
   .tm-form-block {
