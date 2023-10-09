@@ -73,7 +73,16 @@ const test = `
         <p>Если система использует генетические вычисления и базы данных, она относится к каким интеллектуальным системам?</p></p>
         <p>Ответ: ${savedRadioButton4}</p></p>
     </div>
-
+    
+</div>
+<div class="tm-mark-block">
+    <p class="mb-4 .mb-9 mb-1">Оцените работу</p>
+    <ul class="ml-3 textarea__body">
+    <textarea id="textarea2" placeholder="Оставьте комментарий о работе здесь"></textarea>
+    </ul>
+    <div class="text-center mt-5 ">
+        <a class="waves-effect btn-large mt-23 " id="upload-button" href="./survey.html">Загрузить задание</a>
+    </div>
 </div>
 
 `;
@@ -104,5 +113,19 @@ if(savedTextareaValue === null){
 // });
 
 
+let textarea2 = document.querySelector('#textarea2');
 
+// Восстанавливаем сохраненное значение из Local Storage для textarea2
+let savedTextareaValue2 = localStorage.getItem('textareaValue2');
+if (savedTextareaValue2) {
+  textarea2.value = savedTextareaValue2;
+}
+
+// Добавляем обработчик события "input" для textarea2
+textarea2.addEventListener('input', function() {
+  // Сохраняем текстовое значение в Local Storage для textarea2
+  localStorage.setItem('textareaValue2', textarea2.value);
+});
+
+console.log(textarea2.value);
 

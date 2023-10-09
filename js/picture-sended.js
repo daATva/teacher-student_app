@@ -46,25 +46,29 @@ console.log(selectedOptionText);
 if (storedData) {
 // Создаем элементы для текста и ссылки
 const textElement = document.createElement('p');
+const markElement = document.createElement('p');
 const linkElement = document.createElement('a');
 
 document.querySelector('.text-center').appendChild(textElement);
 document.querySelector('.text-center').appendChild(linkElement);
+document.querySelector('.mark__send').appendChild(markElement);
 
 // Устанавливаем текст и ссылку на элементы
 textElement.textContent = 'У вас есть невыполненный тест, чтобы пройти нажмите на тему текста';
 
+let markItem = localStorage.getItem('textareaValue2');
+
 let linkStorage = localStorage.getItem('SelectedValue');
+
+markElement.textContent = ` Комментарий который оставил учитель по вашей работе : ${markItem}`
+
+console.log(markItem)
+
 
 
 linkElement.textContent = linkStorage;
 
 linkElement.href = storedData.link;
-
-
-if(linkStorage === 'Тест по предмету «Математическая логика»'){
-  console.log(666)
-}
 
 // Добавляем слушатель на ссылку
 linkElement.addEventListener('click', function() {
@@ -81,3 +85,4 @@ linkElement.addEventListener('click', function() {
 // Если данных нет, вы можете вывести сообщение об отсутствии данных
 console.log('Нет сохраненных данных');
 }
+
