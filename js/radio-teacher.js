@@ -37,9 +37,13 @@ textElement.textContent = savedRadioButton4;
 textElement.textContent = savedRadioButton1;
 textElement.textContent = savedRadioButton4;
 
+const noteElement = document.createElement('p');
+document.querySelector('.footer__image').appendChild(noteElement);
+
+noteElement.classList.add("text-center");
+noteElement.textContent = 'Ученик выполнил задания';
 
 const test = `
-<p class="mt-5  mt-7 text-center">Ученик выполнил задания</p>
 <p class="text-center mt-22">Тест по предмету «Системы искусственного интеллекта»</p>
 
 <div class = "tm-bg-other" >
@@ -81,7 +85,7 @@ const test = `
     <textarea id="textarea2" placeholder="Оставьте комментарий о работе здесь"></textarea>
     </ul>
     <div class="text-center mt-5 ">
-        <a class="waves-effect btn-large mt-23 " id="upload-button" href="./survey.html">Загрузить задание</a>
+        <a class="waves-effect btn-large mt-23 " id="upload-button" href="./survey.html">Отправить оценку</a>
     </div>
 </div>
 
@@ -129,3 +133,21 @@ textarea2.addEventListener('input', function() {
 
 console.log(textarea2.value);
 
+// Получаем выбранный файл из localStorage
+let base64String = localStorage.getItem("image");
+
+// Создаем элемент img и отображаем выбранный файл
+let img = document.createElement("img");
+let imgFooter = document.getElementById("footer_id")
+
+img.width = 450;
+img.height = 750;
+
+img.classList.add('image-center')
+img.src = base64String;
+document.body.appendChild(img);
+
+imgFooter.appendChild(img);
+
+
+// Очищаем localStorage

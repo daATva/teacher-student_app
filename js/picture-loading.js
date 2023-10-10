@@ -27,7 +27,7 @@ fileInput.addEventListener("change", function () {
 
       // Добавляем обработчик события load для image
       image.addEventListener("load", function () {
-        // Задаем желаемый размер изображения
+        // Задаем  размер изображения
         let width = 720;
         let height = 1280;
 

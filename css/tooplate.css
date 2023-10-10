@@ -570,6 +570,16 @@ input[type="email"]:not(.browser-default).tm-input-white-bg {
 display: block;
 }
 
+.footer__image{
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.image__center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .mark__send{
   display: flex;
   flex-direction: column;
