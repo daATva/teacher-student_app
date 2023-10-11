@@ -34,6 +34,7 @@ if (dataURL) {
 // Получаем данные из локального хранилища и преобразуем JSON обратно в объект
 const storedData = JSON.parse(localStorage.getItem('myData'));
 
+
 // import { options } from "./teacher";
 
 // Получаем сохраненное значение из Local Storage
@@ -48,6 +49,7 @@ if (storedData) {
 const textElement = document.createElement('p');
 const markElement = document.createElement('p');
 const linkElement = document.createElement('a');
+const linkElements = document.createElement('a');
 
 document.querySelector('.text-center').appendChild(textElement);
 document.querySelector('.text-center').appendChild(linkElement);
@@ -62,13 +64,21 @@ let linkStorage = localStorage.getItem('SelectedValue');
 
 markElement.textContent = ` Комментарий который оставил учитель по вашей работе : ${markItem}`
 
-console.log(markItem)
 
+// Название опшена
+console.log(linkStorage)
+
+
+
+console.log(storedData.link)
 
 
 linkElement.textContent = linkStorage;
 
-linkElement.href = storedData.link;
+
+linkElement.href = '#'
+
+linkElement.classList.add('mt-22')
 
 // Добавляем слушатель на ссылку
 linkElement.addEventListener('click', function() {
@@ -85,4 +95,6 @@ linkElement.addEventListener('click', function() {
 // Если данных нет, вы можете вывести сообщение об отсутствии данных
 console.log('Нет сохраненных данных');
 }
+console.log(storedData)
 
+// localStorage.removeItem("SelectedValue");

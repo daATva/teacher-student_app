@@ -41,6 +41,7 @@ const noteElement = document.createElement('p');
 document.querySelector('.footer__image').appendChild(noteElement);
 
 noteElement.classList.add("text-center");
+noteElement.classList.add("mt-22");
 noteElement.textContent = 'Ученик выполнил задания';
 
 const test = `
@@ -111,10 +112,15 @@ if(savedTextareaValue === null){
 
 // const uploadButton = document.getElementById("upload-button");
 
-// uploadButton.addEventListener("click", function() {
-//   task.style.display = "none";
-//   console.log(888);
-// });
+uploadButton.addEventListener("click", function() {
+  
+    localStorage.removeItem('selectedRadioButtongroup1');
+    localStorage.removeItem('selectedRadioButtongroup2');
+    localStorage.removeItem('selectedRadioButtongroup3');
+    localStorage.removeItem('selectedRadioButtongroup4');
+    localStorage.removeItem('textareaValue');
+
+});
 
 
 let textarea2 = document.querySelector('#textarea2');

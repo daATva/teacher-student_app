@@ -40,3 +40,5 @@ uploadButton.addEventListener("click", function (e) {
     alert("Пожалуйста, выберите файл изображения");
   }
 });
+
+fileInput.accept = "image/jpeg, image/png";
