@@ -42,10 +42,10 @@ document.querySelector('.footer__image').appendChild(noteElement);
 
 noteElement.classList.add("text-center");
 noteElement.classList.add("mt-22");
-noteElement.textContent = 'Ученик выполнил задания';
 
 const test = `
 <p class="text-center mt-22">Тест по предмету «Системы искусственного интеллекта»</p>
+<p class="text-center mt-22">Ученик выполнил задания</p>
 
 <div class = "tm-bg-other" >
 
@@ -96,6 +96,8 @@ const empty = ``
 
 const container = document.querySelector('.task__stage');
 
+const taskElement = document.getElementById('task');
+
 const div = document.createElement('div');
 
 div.innerHTML = test;
@@ -104,23 +106,25 @@ container.appendChild(div);
 
 if(savedTextareaValue === null){
     div.innerHTML = empty
+    
 }
 // document.querySelector('.text-center').appendChild(linkElement);
 
 
 }
+localStorage.removeItem('textareaValue');   
 
-// const uploadButton = document.getElementById("upload-button");
+const uploadButtons = document.getElementById("upload-buttons");
 
-uploadButton.addEventListener("click", function() {
-  
+uploadButtons.addEventListener("click", function() {
     localStorage.removeItem('selectedRadioButtongroup1');
     localStorage.removeItem('selectedRadioButtongroup2');
     localStorage.removeItem('selectedRadioButtongroup3');
     localStorage.removeItem('selectedRadioButtongroup4');
-    localStorage.removeItem('textareaValue');
+    localStorage.removeItem('textareaValue');   
 
 });
+
 
 
 let textarea2 = document.querySelector('#textarea2');
@@ -129,6 +133,7 @@ let textarea2 = document.querySelector('#textarea2');
 let savedTextareaValue2 = localStorage.getItem('textareaValue2');
 if (savedTextareaValue2) {
   textarea2.value = savedTextareaValue2;
+  taskElement.style.display = 'none';
 }
 
 // Добавляем обработчик события "input" для textarea2
@@ -155,5 +160,5 @@ document.body.appendChild(img);
 
 imgFooter.appendChild(img);
 
-
 // Очищаем localStorage
+

@@ -49,7 +49,6 @@ if (storedData) {
 const textElement = document.createElement('p');
 const markElement = document.createElement('p');
 const linkElement = document.createElement('a');
-const linkElements = document.createElement('a');
 
 document.querySelector('.text-center').appendChild(textElement);
 document.querySelector('.text-center').appendChild(linkElement);
@@ -67,8 +66,11 @@ markElement.textContent = ` Комментарий который оставил
 
 // Название опшена
 console.log(linkStorage)
+console.log(markItem)
 
-
+if(markItem === null){
+  markElement.textContent = ` `
+}
 
 console.log(storedData.link)
 
