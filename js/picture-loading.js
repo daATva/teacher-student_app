@@ -63,19 +63,3 @@ fileInput.addEventListener("change", function () {
   }
 });
 
-uploadButton.addEventListener("click", function (e) {
-  
-  // Проверяем, есть ли картинка в localStorage
-  if (localStorage.getItem("image")) {
-    // Перенаправляем на другую страницу
-    window.location.href = "./survey.html";
-    // Не удаляем изображение из localStorage
-    // localStorage.removeItem("image");
-    task.style.display = "none";
-  } else {
-    // Отменяем действие по умолчанию (переход по ссылке)
-    e.preventDefault();
-    // Показываем сообщение об ошибке
-    alert("Пожалуйста, выберите файл изображения");
-  }
-});

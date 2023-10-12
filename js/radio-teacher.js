@@ -67,7 +67,7 @@ const test = `
         <p>Ответ: ${savedTextareaValue}</p></p>
     </div>
 
-    <div class = "tm-bg-others">
+    <div class = "tm-bg-others">savedTextareaValue
         <p class="mt-21">Задание 4 
         <p>На каких знаниях основываются системы?</p></p>
         <p>Ответ: ${savedRadioButton3}</p></p>
@@ -110,24 +110,37 @@ if(savedTextareaValue === null){
 }
 // document.querySelector('.text-center').appendChild(linkElement);
 
+task.style.display = "none"
+
+
 console.log(savedTextareaValue)
 }
 
 const uploadButtons = document.getElementById("upload-buttons");
 
 uploadButtons.addEventListener("click", function() {
-    localStorage.removeItem('selectedRadioButtongroup1');
-    localStorage.removeItem('selectedRadioButtongroup2');
-    localStorage.removeItem('selectedRadioButtongroup3');
-    localStorage.removeItem('selectedRadioButtongroup4');
-    localStorage.removeItem('savedTextareaValue');   
-    localStorage.removeItem('savedTextareaValue2');
+  
 
     div.innerHTML = empty
     taskElement.style.display = 'none';
 
-    // savedTextareaValue === null
+    savedTextareaValue === null
 });
+
+localStorage.removeItem('selectedRadioButtongroup1');
+localStorage.removeItem('selectedRadioButtongroup2');
+localStorage.removeItem('selectedRadioButtongroup3');
+localStorage.removeItem('selectedRadioButtongroup4');
+localStorage.removeItem('savedTextareaValue');   
+localStorage.removeItem('savedTextareaValue2');
+
+function removeElement() {
+    const textarea1 = document.getElementById("textarea1");
+    const textarea2 = document.getElementById("textarea2");
+  
+    textarea1.parentNode.removeChild(textarea1);
+    textarea2.parentNode.removeChild(textarea2);
+  }
 
 const taskElement = document.getElementById('task');
 let textarea2 = document.querySelector('#textarea2');
