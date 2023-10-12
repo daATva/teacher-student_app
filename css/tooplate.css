@@ -177,17 +177,16 @@ ul.tm-home-list:not(.browser-default) {
   background-color: rgba(0, 0, 0, 0.785);
 }
 .tm-bg-other {
-  background-color: rgb(31 31 31 / 79%);
+  background-color: rgb(20 20 20 / 79%);
   border-radius:20px ;
   padding: 30px 30px;
-  background-image: url(../img/task-bg.png);
+  /* background-image: url(../img/task-bg.png); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
 }
 .tm-bg-others {
   background-color: rgba(0, 0, 0, 0.900);
-  filter: brightness(70%);
 
   border-radius:20px ;
   padding: 10px 30px;

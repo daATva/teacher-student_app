@@ -105,14 +105,13 @@ div.innerHTML = test;
 container.appendChild(div);
 
 if(savedTextareaValue === null){
-    div.innerHTML = empty
+    test = empty
     
 }
 // document.querySelector('.text-center').appendChild(linkElement);
 
-
+console.log(savedTextareaValue)
 }
-localStorage.removeItem('textareaValue');   
 
 const uploadButtons = document.getElementById("upload-buttons");
 
@@ -121,19 +120,23 @@ uploadButtons.addEventListener("click", function() {
     localStorage.removeItem('selectedRadioButtongroup2');
     localStorage.removeItem('selectedRadioButtongroup3');
     localStorage.removeItem('selectedRadioButtongroup4');
-    localStorage.removeItem('textareaValue');   
+    localStorage.removeItem('savedTextareaValue');   
+    localStorage.removeItem('savedTextareaValue2');
 
+    div.innerHTML = empty
+    taskElement.style.display = 'none';
+
+    // savedTextareaValue === null
 });
 
-
-
+const taskElement = document.getElementById('task');
 let textarea2 = document.querySelector('#textarea2');
 
 // Восстанавливаем сохраненное значение из Local Storage для textarea2
 let savedTextareaValue2 = localStorage.getItem('textareaValue2');
 if (savedTextareaValue2) {
   textarea2.value = savedTextareaValue2;
-  taskElement.style.display = 'none';
+  
 }
 
 // Добавляем обработчик события "input" для textarea2
