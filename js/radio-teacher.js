@@ -111,7 +111,7 @@ if(savedTextareaValue === null){
 // document.querySelector('.text-center').appendChild(linkElement);
 
 task.style.display = "none"
-
+// imgFooter.style.display = "block"
 
 console.log(savedTextareaValue)
 }

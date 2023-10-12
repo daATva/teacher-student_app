@@ -193,6 +193,9 @@ ul.tm-home-list:not(.browser-default) {
   margin-bottom: 20px;
 }
 
+.class-none{
+  display: none;
+}
 
 .tm-form-block {
   /* padding: 0px 30px; */
