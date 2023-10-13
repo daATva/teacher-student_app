@@ -196,6 +196,9 @@ ul.tm-home-list:not(.browser-default) {
 .class-none{
   display: none;
 }
+.class-show{
+  display: block;
+}
 
 .tm-form-block {
   /* padding: 0px 30px; */
@@ -573,7 +576,7 @@ input[type="email"]:not(.browser-default).tm-input-white-bg {
   font-size: 18px;
 }
 .task__stage{
-display: block;
+  display: none;
 }
 
 .footer__image{

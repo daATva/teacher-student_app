@@ -13,7 +13,9 @@ continueButton.addEventListener('click', function() {
     let checkRole = prompt('Введите пароль: ');
     if (checkRole === '') {
       // Если пароль верный, перейти на страницу teacher.html
+      
       window.location.href = './teacher.html';
+      
     } else {
       // Если пароль неверный, показать сообщение об ошибке
       alert('Пароль неверный');

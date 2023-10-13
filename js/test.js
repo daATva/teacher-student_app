@@ -1,7 +1,27 @@
 // Получаем все радио-кнопки и текстовое поле
 var radioButtonsGroup1 = document.getElementsByName('group1');
 var radioButtonsGroup2 = document.getElementsByName('group2');
+// Очистить textarea
 var textarea = document.querySelector('textarea');
+textarea.value = '';
+
+// Удалить сохранённое значение из localStorage
+localStorage.removeItem('savedTextareaValue');
+
+
+// Получаем значение textarea
+var textareaValue = document.getElementById('textarea-id').value;
+
+// Сохраняем значение в localStorage
+localStorage.setItem('savedTextareaValue', textareaValue);
+
+// Извлекаем значение из localStorage
+var savedTextareaValue = localStorage.getItem('savedTextareaValue');
+
+// Устанавливаем значение textarea
+document.getElementById('textarea-id').value = savedTextareaValue;
+
+
 
 // Добавляем обработчик события "change" для радио-кнопок
 radioButtonsGroup1.forEach(function(radioButton) {

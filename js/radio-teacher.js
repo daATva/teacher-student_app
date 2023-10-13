@@ -104,42 +104,32 @@ div.innerHTML = test;
 
 container.appendChild(div);
 
-if(savedTextareaValue === null){
-    test = empty
-    
-}
-// document.querySelector('.text-center').appendChild(linkElement);
+// if(savedRadioButton1 === null){
+//     test = empty
+// }
+    const textarea1 = document.getElementById("textarea1");
+    const textarea2 = document.getElementById("textarea2");
 
-task.style.display = "none"
+
+
+task.style.display = "block"
 // imgFooter.style.display = "block"
 
 console.log(savedTextareaValue)
 }
 
+// document.getElementById('task').classList.add('class-none');
+// document.getElementById('footer_id').classList.add('class-none');
 const uploadButtons = document.getElementById("upload-buttons");
 
 uploadButtons.addEventListener("click", function() {
   
 
-    div.innerHTML = empty
-    taskElement.style.display = 'none';
 
-    savedTextareaValue === null
 });
 
-localStorage.removeItem('selectedRadioButtongroup1');
-localStorage.removeItem('selectedRadioButtongroup2');
-localStorage.removeItem('selectedRadioButtongroup3');
-localStorage.removeItem('selectedRadioButtongroup4');
-localStorage.removeItem('savedTextareaValue');   
-localStorage.removeItem('savedTextareaValue2');
-
-function removeElement() {
-    const textarea1 = document.getElementById("textarea1");
-    const textarea2 = document.getElementById("textarea2");
-  
-    textarea1.parentNode.removeChild(textarea1);
-    textarea2.parentNode.removeChild(textarea2);
+for(var i = 0; i < localStorage.length; i++){
+    localStorage.key(i);
   }
 
 const taskElement = document.getElementById('task');
