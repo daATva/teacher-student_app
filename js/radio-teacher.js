@@ -108,8 +108,6 @@ console.log(savedTextareaValue)
 const uploadButtons = document.getElementById("upload-buttons");
 
 uploadButtons.addEventListener("click", function() {
-    // настроить обнуление
-    // записать area в локал стореджи и потом при заходе чекать её , если нет = - , есть + 
     function saveElementVisibility() {
         // Получаем текущее состояние элемента
         const isElementVisible = document.getElementById("myElement").style.display === "block";
@@ -184,6 +182,5 @@ document.getElementById('upload-buttonsa').addEventListener('click', function() 
   stateRole.style.display = 'block';
 });
 localStorage.removeItem('selectedRadioButton');
-console.log(selectedRadioButton);
 
 
