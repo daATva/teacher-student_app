@@ -23,4 +23,23 @@ continueButton.addEventListener('click', function() {
   }
 });
 
-// 
+// Получаем ссылки на радио-кнопки и кнопку "Продолжить"
+const radioButton1 = document.getElementById('19');
+const radioButton2 = document.getElementById('20');
+const submitButton = document.querySelector('.waves-effect.btn-large');
+
+// Обработчик события для кнопки "Продолжить"
+submitButton.addEventListener('click', function() {
+  let value;
+
+  // Проверяем, какая радио-кнопка была выбрана
+  if (radioButton1.checked) {
+    value = radioButton1.value;
+  } else if (radioButton2.checked) {
+    value = radioButton2.value;
+  }
+
+  // Записываем значение в Local Storage
+  localStorage.setItem('selectedRadioButton', value);
+  
+});

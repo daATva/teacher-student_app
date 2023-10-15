@@ -349,6 +349,11 @@ textarea:focus {
   margin: 0px 0px 40px 0px;
 }
 
+.btn-small{
+  background-color: rgba(0, 0, 0, 0.589);
+  padding: 0 27px 30px 27px;
+  
+}
 .btn-medium{
   padding: 0 35px 30px 35px;
 
@@ -576,7 +581,7 @@ input[type="email"]:not(.browser-default).tm-input-white-bg {
   font-size: 18px;
 }
 .task__stage{
-  display: none;
+  /* display: none; */
 }
 
 .footer__image{
