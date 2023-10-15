@@ -107,9 +107,7 @@ const div = document.createElement('div');
 
 div.innerHTML = test;
 
-// if(savedTextareaValue === null){
-//     test = empty
-// }
+
 container.appendChild(div);
 
 
@@ -118,13 +116,11 @@ container.appendChild(div);
 
 
 
-// imgFooter.style.display = "block"
 
 console.log(savedTextareaValue)
 }
 
-// document.getElementById('task').classList.add('class-none');
-// document.getElementById('footer_id').classList.add('class-none');
+
 const uploadButtons = document.getElementById("upload-buttons");
 
 uploadButtons.addEventListener("click", function() {
@@ -161,13 +157,6 @@ let textarea2 = document.querySelector('#textarea2');
 let savedTextareaValue2 = localStorage.getItem('textareaValue2');
 
 textarea2.value = ''
-// if (savedTextareaValue2) {
-//   // Если сохраненное значение есть, устанавливаем его в поле textarea2
-//   textarea2.value = savedTextareaValue2;
-// } else {
-//   // Если сохраненного значения нет, делаем поле textarea2 пустым
-//   textarea2.value = '';
-// }
 
 // Добавляем обработчик события "input" для textarea2
 textarea2.addEventListener('input', function() {
@@ -214,6 +203,3 @@ localStorage.removeItem('selectedRadioButton');
 console.log(selectedRadioButton);
 
 
-// stateRole.classList.add('newClass');
-
-// Проверяем, было ли сохранено значение
