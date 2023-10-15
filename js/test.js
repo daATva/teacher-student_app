@@ -6,9 +6,6 @@ let textarea = document.querySelector('#textarea-id');
 
 // Восстанавливаем сохраненное значение из Local Storage для textarea2
 textarea.value = '';
-console.log(savedTextareaValue)
-
-
 // Удалить сохранённое значение из localStorage
 localStorage.removeItem('savedTextareaValue');
 
@@ -46,15 +43,6 @@ textarea.addEventListener('input', function() {
     // Сохраняем текстовое значение в local storage
     localStorage.setItem('textareaValue', textarea.value);
 });
-
-
-
-
-// if (savedTextareaValue !== null) {
-//     console.log('Текстовое значение: ' + savedTextareaValue);
-// } else {
-//     console.log('На задание не дали ответ');
-// }
 
 // Функция, которая обрабатывает изменение радиокнопок и сохраняет их в localStorage
 function handleRadioChange(event) {
