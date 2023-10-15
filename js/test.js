@@ -2,12 +2,15 @@
 var radioButtonsGroup1 = document.getElementsByName('group1');
 var radioButtonsGroup2 = document.getElementsByName('group2');
 // Очистить textarea
-var textarea = document.querySelector('textarea');
+let textarea = document.querySelector('#textarea-id');
+
+// Восстанавливаем сохраненное значение из Local Storage для textarea2
 textarea.value = '';
+console.log(savedTextareaValue)
+
 
 // Удалить сохранённое значение из localStorage
 localStorage.removeItem('savedTextareaValue');
-
 
 // Получаем значение textarea
 var textareaValue = document.getElementById('textarea-id').value;

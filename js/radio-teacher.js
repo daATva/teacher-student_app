@@ -86,7 +86,7 @@ const test = `
     
 </div>
 <div class="tm-mark-block">
-    <p class="mb-4 .mb-9 mb-1">Оцените работу</p>
+    <p class="mb-4 .mb-9 mb-1">Оцените работу и оставьте комментарий</p>
     <ul class="ml-3 textarea__body">
     <textarea id="textarea2" placeholder="Оставьте комментарий о работе здесь"></textarea>
     </ul>
