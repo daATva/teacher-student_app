@@ -4,18 +4,6 @@ let savedRadioButton3 = localStorage.getItem('selectedRadioButtongroup3');
 let savedRadioButton4 = localStorage.getItem('selectedRadioButtongroup4');
 let savedTextareaValue = localStorage.getItem('textareaValue');
 
-
-
-
-console.log(savedTextareaValue)
-
-// Теперь у вас есть доступ к сохраненным значениям, и вы можете использовать их по вашему усмотрению
-console.log('Задание 1: ' + savedRadioButton1);
-console.log('Задание 2: ' + savedRadioButton2);
-console.log('Задание 3: ' + savedRadioButton3);
-console.log('Задание 4: ' + savedRadioButton4);
-console.log('Задание с текстовым полем: ' + savedTextareaValue);
-
 //  Получаем данные из локального хранилища и преобразуем JSON обратно в объект
 const storedData = JSON.parse(localStorage.getItem('myData'));
 const savedRadioButtons = JSON.parse(localStorage.getItem('savedRadioButton1'));
@@ -110,12 +98,8 @@ div.innerHTML = test;
 
 container.appendChild(div);
 
-
-    const textarea1 = document.getElementById("textarea1");
-    const textarea2 = document.getElementById("textarea2");
-
-
-
+const textarea1 = document.getElementById("textarea1");
+const textarea2 = document.getElementById("textarea2");
 
 console.log(savedTextareaValue)
 }
