@@ -89,6 +89,8 @@ linkElement.addEventListener('click', function() {
     window.location.href = 'sisAI.html';
   } else if (linkStorage === 'Тест по предмету «Инновационная экономика и технологическое предпринимательство»') {
     window.location.href = 'innovo.html';
+  } else if (linkStorage === 'Тест по предмету «Математическая логика»') {
+    window.location.href = 'matLog.html';
   } else {
     console.log('Неизвестная тема');
   }
