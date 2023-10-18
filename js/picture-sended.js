@@ -85,7 +85,7 @@ linkElement.classList.add('mt-22')
 // Добавляем слушатель на ссылку
 linkElement.addEventListener('click', function() {
   // Перенаправляем на другую страницу в зависимости от значения linkStorage
-  if (linkStorage === 'Тест по предмету «Математическая логика»') {
+  if (linkStorage === 'Тест по предмету «Системы искусственного интеллекта»') {
     window.location.href = 'sisAI.html';
   } else if (linkStorage === 'Тест по предмету «Инновационная экономика и технологическое предпринимательство»') {
     window.location.href = 'innovo.html';
