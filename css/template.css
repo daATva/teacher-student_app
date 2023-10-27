@@ -1,10 +1,4 @@
-/*
 
-Template 2105 Input
-
-http://www.tooplate.com/view/2105-input
-	
-*/
 
 
 html {
@@ -12,7 +6,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Arial", Helvetica, Arial, sans-serif;
   color: white;
   overflow-x: hidden;
   background-color: #000;
